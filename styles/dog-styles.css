@@ -21,6 +21,8 @@ body {
     display: block;
     border-top-left-radius: 3vh;
     border-top-right-radius: 3vh;
+    object-fit: cover;
+
 }
 .details-image {
     width: 95%;

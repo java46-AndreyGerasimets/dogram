@@ -19,6 +19,8 @@ body {
     width: 20vw;
     height: 18vw;
     display: block;
+    border-top-left-radius: 3vh;
+    border-top-right-radius: 3vh;
 }
 .details-image {
     width: 95%;
@@ -45,11 +47,14 @@ body {
     background-color: beige;
     color: blue;
     font-size: 1.2rem;
+    border-bottom-left-radius: 3vh;
+    border-bottom-right-radius: 3vh;
 }
 .thumbnails-item {
     margin-top: 2vh;
     margin-left: 2vw;
     border: 1px solid blue;
+    border-radius: 3vh;
 }
 .thumbnails-anchor {
     text-decoration: none;

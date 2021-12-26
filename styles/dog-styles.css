@@ -143,10 +143,12 @@ body, html {
         display: flex;
         width: 75vw;
         height: 85vh;
+        margin-top: 2vh;
     }
     .details-image {
         width: 85%;
         height: 75%;
+        margin-top: 7vh;
         object-fit: contain;
     }
     .details-title {

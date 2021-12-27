@@ -2,6 +2,7 @@
     --thumbnails-image-width: 20vw;
     --thumbnails-image-height: 18vw;
     --thumbnails-title-height: calc(--thumbnails-image-height * 0.33);
+    --details-image-width: 95%;
 }
 @font-face {
     font-family: lakeshor;
@@ -46,23 +47,26 @@ body {
     background-color: beige;
     color: blue;
     font-size: 1.2rem;
+    width: var(--thumbnails-image-width);
     border-bottom-left-radius: 3vh;
     border-bottom-right-radius: 3vh;
 }
 .thumbnails-item {
     margin-top: 2vh;
     margin-left: 2vw;
+    max-width: var(--thumbnails-image-width);
+    min-height: calc(var(--thumbnails-image-height) + var(--thumbnails-title-height));
     border: 1px solid blue;
     border-radius: 3vh;
+    overflow: hidden;
 }
 .thumbnails-image {
-    width: 20vw;
-    height: 18vw;
+    width: var(--thumbnails-image-width);
+    height: var(--thumbnails-image-width);
     display: block;
     border-top-left-radius: 3vh;
     border-top-right-radius: 3vh;
     object-fit: cover;
-
 }
 .thumbnails-anchor {
     text-decoration: none;
@@ -74,29 +78,32 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 100vw;
+    max-width: 100%;
 }
 .details-image {
-    width: 95%;
+    width: var(--details-image-width);
     object-fit: contain;
+    border-radius: 5%;
 }
 .details-title {
     background-color: cornsilk;
     position: absolute;
-    left: 3vw;
-    bottom: 2vw;
+    left: 4vw;
+    bottom: 1vw;
+    background-color: transparent;
+    font-family: airstream;
+    font-style: italic;
 }
 .footer-title {
     position: fixed;
+    bottom: 0;
     width: 100%;
     background-color: rgb(30, 1, 85);
     color: ghostwhite;
     display: block;
     font-size: 8px;
     text-align: center;
-    bottom: 0;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding: 0;
 }
 body, html {
     height: 100%;

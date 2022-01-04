@@ -57,6 +57,14 @@ body {
     flex-direction: column;
     align-items: center;
 }
+.hidden .details-container {
+    display: none;
+}
+.hide-button {
+    position: absolute;
+    right: 5vw;
+    top: 2vw;
+}
 .thumbnails-title {
     display: block;
     text-align: center;
@@ -75,8 +83,17 @@ body {
     border-radius: 25%;
     overflow: hidden
 }
+.selected.thumbnails-item {
+    border-radius: 0;
+    border: 3px solid green;
+}
 .thumbnails-anchor {
     text-decoration: none;
+}
+.hidden .thumbnails-list {
+    flex-direction: column;
+    max-height: 80vh;
+    flex-wrap: nowrap;
 }
 .logo-title {
     background-color: fuchsia;

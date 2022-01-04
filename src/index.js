@@ -1,11 +1,9 @@
-console.log("Hello world!")
 let detailsImage = document.querySelector(".details-image");
 let detailsTitle = document.querySelector(".details-title");
 let anchors = document.querySelectorAll(".thumbnails-anchor");
 let mainContentEl = document.querySelector(".main-content");
 let selectedItem;
 
-setDetails(anchors[0]);
 for(let i = 0; i < anchors.length; i++) {
     anchors[i].addEventListener("click", function(event) {
         event.preventDefault();
@@ -25,8 +23,6 @@ function setDetails(anchor) {
         selectedItem.classList.remove("selected");
     }
     selectedItem = anchor.parentElement;
-    //let thumbnailsTitle = anchor.querySelector(".thumbnails-title").innerHTML;
-    //detailsTitle.textContent = thumbnailsTitle + " : " + anchor.getAttribute("data-details-title");
 }
 
 function showDetails() {
@@ -35,4 +31,7 @@ function showDetails() {
 
 function hideDetails() {
     mainContentEl.classList.add('hidden');
+    if(selectedItem) {
+        selectedItem.classList.remove("selected");
+    }
 }
